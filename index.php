@@ -21,7 +21,7 @@
   <?php
   // set database connection parameters
   $host = "127.0.0.1";
-  $user = "rgordonatrsgc";
+  $user = "rsgc_dunphy_j";
   $pass = "";
   $db = "library";
   $port = 3306;
@@ -63,5 +63,22 @@
     <br>
     <input type="submit" value="Submit">
   </form> 
+  
+  <h1>Our Library Patrons are:</h1>
+  <?php
+  $query = "SELECT * from patron;";
+  $result = mysqli_query($connection, $query);
+  echo "<table>";
+  echo "<tr>";
+  echo "<th>";
+  echo "ID";
+  echo "</th>";
+  echo "<th>";
+  echo "Patron Name";
+  echo "</th>";
+  echo "</tr>";
+  
+  ?>
+  
 </body>
 </html>
